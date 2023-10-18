@@ -73,6 +73,8 @@ figure{
     justify-content: space-between;
     height: 70px;
     padding-left: 16px;
+    position: relative;
+
 }
 .nav-logo {
     font-family: "Raleway";
@@ -544,7 +546,6 @@ label.user-contact-checkbox{
 .section-project-list-item{
     position: relative;
     background: var(--white);
-    /* padding-bottom: 48px; */
 }
 .section-project-list-item:hover figcaption{
     transform: translateY(0); 
@@ -587,6 +588,7 @@ label.user-contact-checkbox{
     justify-content: center;
     row-gap: 48px;
     column-gap: 24px;
+    padding: 0 16px;
 }
 .section-project-list-item {
     background: var(--white);
@@ -658,6 +660,7 @@ label.user-contact-checkbox{
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 72px;
+        padding: 0 16px;
     }
     .footer-social-links {
         align-items: center;
@@ -710,8 +713,7 @@ label.user-contact-checkbox{
         gap: 24px;
     }
     .footer-form-input {
-        width: 398px;
-        /* width: 100%; */
+        width: 100%;
         height: 40px;
         color: var(--white);
         border-radius: 4px;
@@ -773,11 +775,12 @@ label.user-contact-checkbox{
         border: unset;
         padding: 0;
         display: flex;
-        /* margin-left: 249px; */
+        position: absolute;
+        right: 16px;
     }
     .menu-toggle:hover,
     .menu-toggle:focus {
-        background-color: var(ocean);
+        background-color: var(--ocean);
         border-color: var(--ocean);
         color: var(--cloud);
     }
@@ -990,6 +993,12 @@ label.user-contact-checkbox{
     display: flex;
     justify-content: center;
 }
+.section-projects-list {
+    justify-content: space-between;
+}
+.section-project-list-item {
+    width: calc((100% / 2 ) - 24px);
+}
 .footer-details {
     text-align: left;
 }
@@ -1000,18 +1009,23 @@ label.user-contact-checkbox{
     padding-left: 108px;
     padding-right: 108px;
 }
+.footer-social-media-list {
+    margin-top: 0;
+}
 .footer-subscribe {
     align-self: flex-end;
     text-align: left;
+    display: block;
 }
 .subscriber-text {
     text-align: left;
+    margin-bottom: 0;
 }
 .footer-form-input {
     width: 264px;
 }
-.subscriber-field {
-gap: 24px;
+.button-subscriber {
+    margin-left: 24px;
 }
 }
 @media screen and (min-width: 1158px) {
@@ -1096,15 +1110,20 @@ margin-bottom: 120px;
 .footer {
     padding-top: 101.5px;
     padding-bottom: 100px;
+    padding-left: 156px;
+    padding-right: 159px;
 }
 .footer-container {
+    display: block;
     display: inline-flex;
+    flex-flow: nowrap;
+    text-wrap: nowrap;
 }
-/* .footer-social-links {
+.footer-social-links {
     margin-left: 120px;
-} */
+}
 .footer-subscribe {
-    gap: 80px;
+    margin-left: 80px;
 }
 
 /* .button-subscriber {
